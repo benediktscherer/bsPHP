@@ -1,0 +1,12 @@
+{
+  "name": "bsPHP",
+  "description": "a PHP based starterkid",
+  "autoload": {
+    "psr-0": {
+    }
+  },
+  "require": {
+    "twig/twig": "^2.0",
+    "vlucas/phpdotenv": "^3.4"
+  }
+}

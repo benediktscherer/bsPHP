@@ -1,0 +1,8 @@
+/* ================================ *\
+    Headlines
+\* ================================ */
+h1 {
+    @include _reset-alignment();
+    margin-bottom: 10px;
+    @include _font-headline('bold', $color-headline);
+}

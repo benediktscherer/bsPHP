@@ -1,0 +1,11 @@
+/// switch color for different backgroundcolors.
+/// problem: lightness($color) returns a percent value …
+/// @link https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/
+/// @param {string} $color
+@function toggle-color($color) {
+  $light: lightness($color); // need number but returns percent => fail!
+  $threshold: 60%;
+
+  $switch: calc(#{$light - $threshold} * (-100%));
+  @return hsl(0%, 0%, $switch);
+}

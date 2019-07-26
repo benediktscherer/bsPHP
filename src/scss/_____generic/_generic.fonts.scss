@@ -1,0 +1,13 @@
+/* ================================ *\
+    Fonts Include
+\* ================================ */
+@font-face {
+  font-family: 'icomoon';
+  src: url('#{$path-font}/icomoon.eot');
+  src: url('#{$path-font}/icomoon.eot?#iefix') format('embedded-opentype'),
+  url('#{$path-font}/icomoon.woff') format('woff'),
+  url('#{$path-font}/icomoon.ttf') format('truetype'),
+  url('#{$path-font}/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

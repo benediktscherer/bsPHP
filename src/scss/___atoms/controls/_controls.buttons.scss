@@ -1,0 +1,66 @@
+// =======================================
+button,
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  @include _reset-glow();
+}
+
+// =======================================
+.btn-cta {
+  @include _btn-alignment();
+  @include _btn-icon();
+
+  border: 0;
+  border-radius: $border-radius;
+  background: $controls-primary-bg;
+
+  @include _font-button('bold', $controls-primary-color);
+  @include _font-size($font-size-5);
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+
+  @include _link-active() {
+    outline: none;
+    text-decoration: none;
+    background: darken($controls-primary-bg, 6%);
+  }
+
+  @include _link-disabled() {
+    cursor: not-allowed;
+    opacity: .5;
+    filter: alpha(opacity=30);
+  }
+}
+
+.btn-default {
+  @include _btn-alignment();
+  @include _btn-icon();
+
+  border: 0;
+  border-radius: $border-radius;
+  background: $controls-default-bg;
+
+  @include _font-button('bold', $controls-default-color);
+  @include _font-size($font-size-5);
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+
+  @include _link-active() {
+    outline: none;
+    text-decoration: none;
+    background: darken($controls-default-bg, 6%);
+  }
+
+  @include _link-disabled() {
+    cursor: not-allowed;
+    opacity: .5;
+    filter: alpha(opacity=30);
+  }
+}

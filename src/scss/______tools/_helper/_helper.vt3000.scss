@@ -1,0 +1,26 @@
+@mixin _vtModuleHelper() {
+  > .module-container {
+    position: relative;
+    width: 100%;
+
+    @content;
+  }
+}
+
+@mixin _vtComponentHelper() {
+  > .component-container {
+    position: relative;
+    width: 100%;
+
+    @content;
+  }
+}
+
+@mixin _vtWidgetHelper() {
+  > .widget-container {
+    position: relative;
+    width: 100%;
+
+    @content;
+  }
+}

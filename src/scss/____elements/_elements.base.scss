@@ -1,0 +1,18 @@
+/* ================================ *\
+    BODY / HTML
+\* ================================ */
+body {
+  position: relative;
+  @include _font-paragraph();
+
+  &.-no-scroll {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+p {
+  @include _reset-alignment();
+  @include _font-paragraph();
+  margin-bottom: 10px;
+}

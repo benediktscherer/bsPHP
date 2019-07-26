@@ -1,0 +1,13 @@
+/**
+    Flex Grid
+    <div data-grid="3"> ... </div>
+ */
+@each $i in $grid {
+  [data-grid="#{$i}"] {
+    @include _make-row();
+
+    > * {
+      @include _make-column($i);
+    }
+  }
+}

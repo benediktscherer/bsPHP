@@ -1,0 +1,13 @@
+/**
+  This Project is the "Default / Main Project"
+  use the default vars for custom project vars!
+ */
+@import "_______settings/settings";
+@import "______tools/tools";
+@import "_____generic/generic";
+@import "____elements/elements";
+@import "___atoms/atoms";
+@import "__organisms/organisms";
+@import "_pages/pages";
+
+@import "vendor/vendor";

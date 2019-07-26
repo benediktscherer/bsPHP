@@ -1,0 +1,111 @@
+/* ================================ *\
+
+    Set margin for child elem.
+    in lists / grid
+
+\* ================================ */
+@mixin _list-child-margin($margin: $spacing-lr, $div: '*', $direction: 'right') {
+  > #{$div} {
+    margin-#{$direction}: $margin;
+
+    @if($direction == 'right') {
+      &:last-child {
+        margin-#{$direction}: 0;
+      }
+    }
+
+    @if($direction == 'left') {
+      &:first-child {
+        margin-#{$direction}: 0;
+      }
+    }
+
+  }
+}
+
+
+
+
+
+/// CSS side implementation of bootstrap rows
+@mixin _make-row {
+  //  margin-left: -#{$bs-gap};
+  //  margin-right: -#{$bs-gap};
+
+  &:after {
+    clear: both;
+  }
+
+  &:after,
+  &:before {
+    display: table;
+    content: "";
+  }
+
+  @if($flex){
+    @supports (display: flex) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: initial;
+      margin-left: initial;
+    }
+  }
+
+  @if($cssGrid) {
+    @supports (display: grid) and (not (display: -ms-grid)) {
+      display: grid;
+      grid-column-gap: $grid-gap;
+      grid-row-gap: 0;
+      margin: initial;
+      padding: initial;
+      grid-template-columns: repeat($grid-columns, 1fr);
+
+      &:after,
+      &:before {
+        content: none;
+      }
+    }
+  }
+}
+
+
+/// CSS side implementation of bootstrap columns
+///
+/// Uses floating percentage widths as default, flex as enhancement, or even grid when applicable, therefor some resets are needed.
+/// @param {string} $spancolumns
+@mixin _make-column($spancolumns) {
+  width: calc(#{100% / $spancolumns} - #{$grid-gap * ($spancolumns - 1) / $spancolumns});
+  float: left;
+  position: relative;
+  margin-right: $grid-gap;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @if($flex) {
+    @supports (display: flex) {
+      flex: 1 0 0;
+
+      & + [data-grid] {
+        margin-left: $grid-gap;
+      }
+    }
+  }
+
+
+  @if($cssGrid) {
+    @supports (display: grid) and (not (display: -ms-grid)) {
+      grid-column: auto / span #{$grid-columns / $spancolumns};
+      float: initial;
+      position: initial;
+      width: initial;
+      margin: initial;
+      padding: initial;
+
+      & + [data-grid] {
+        margin-left: 0;
+      }
+    }
+  }
+}

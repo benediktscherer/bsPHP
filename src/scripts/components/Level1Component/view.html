@@ -1,0 +1,15 @@
+<div>
+  <h2>{{ "headline" | i18n }}</h2>
+
+  {% for user in data %}
+  <p>
+    <strong>{{ user.name }}</strong>
+    <small>[{{ user.username }}]</small>
+    <br /> {{ user.website }}
+  </p>
+  {% endfor %}
+
+  <a href="{{ '/subgroup/level2' | baseUrl }}?url=params">{{ "link-text" | i18n }}</a>
+</div>
+
+<vt-component name="Subgroup/Level2"></vt-component>

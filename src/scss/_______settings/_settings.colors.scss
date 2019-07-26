@@ -1,0 +1,38 @@
+/* ================================ *\
+              COLORS
+\* ================================ */
+$color-primary:     #16bae7 !default;
+$color-secondary:   #232831 !default;
+
+$color-black:       #151515 !default;
+$color-white:       #ffffff !default;
+
+$color-grey-light:  #f1f1f3 !default;
+$color-grey:        #ededed !default;
+$color-grey-dark:   #3e3d40 !default;
+
+$color-success:     #a1c440 !default;
+$color-error:       #c83434 !default;
+$color-hint:        #485a7d !default;
+
+$color-cta:         #a1c440 !default;
+
+
+// Main
+$color-background:  $color-white !default;
+$color-paragraph:   #44484f !default;
+
+// Headline
+$color-headline:    $color-paragraph !default;
+$color-subheadline: $color-primary !default;
+
+// Social
+$colorSocialMap: (
+  'facebook': #3c5998,
+  'instagram': #ff6c00,
+  'twitter': #55acee,
+  'gplus': #dc4a38,
+  'youtube': #e62117,
+  'rss': #ff6c00,
+  'blog': $color-black,
+);

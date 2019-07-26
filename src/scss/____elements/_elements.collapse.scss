@@ -1,0 +1,22 @@
+[data-toggle*="collapse"] {
+  cursor: pointer;
+
+  &:after {
+    width: 40px;
+    flex: 0 0 40px;
+    text-align: center;
+    @include _transition(all);
+    transform: rotate(360deg);
+    //@include _getIcon($icon-angle-down-content);
+  }
+
+  &.-collapsed:after {
+    transform: rotate(180deg);
+  }
+}
+
+.collapse {
+  &:not(.-in) {
+    display: none;
+  }
+}

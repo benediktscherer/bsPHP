@@ -1,0 +1,6 @@
+/// use content when element is in class
+@mixin _nested-in($elem) {
+  #{$elem} & {
+    @content;
+  }
+}

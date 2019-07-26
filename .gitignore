@@ -1,0 +1,19 @@
+# dev
+.idea/*
+!.idea/codeStyleSettings.xml
+!.idea/codeStyles
+
+dist/*
+vendor/*
+node_modules
+
+docs/sassdoc/*
+docs/typedoc/*
+
+# typescript compiled files
+src/scripts/_tmp/**/*.js
+src/**/references.ts
+.tscache/
+*.tmp.txt
+
+.env

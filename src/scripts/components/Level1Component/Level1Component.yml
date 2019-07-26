@@ -1,0 +1,8 @@
+component-level1:
+  de:
+    headline: Level 1 erfolgreich dargestellt.
+    link-text: Ein interner link
+
+  en:
+    headline: Level 1 complete.
+    link-text: An internal link

@@ -1,0 +1,52 @@
+{
+  "name": "bsPHP",
+  "version": "0.0.1",
+  "author": {
+    "name": "Benedikt Scherer",
+    "email": "benedikt.scherer@talentsconnect.com",
+    "url": "https://wwww.benedikt-scherer.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benediktscherer/bsPHP.git"
+  },
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "grunt": "grunt",
+    "clear": "rm -rf ./dist/ && rm -rf ./src/scripts/_tmp && rm -rf ./node_modules",
+    "icomoon": "mkdir -p dist/fonts && node_modules/.bin/icomoon-build -p src/fonts/new-project.json --scss src/scss/_______settings/_settings.icomoon.scss --fonts src/fonts/",
+    "patternlab": "cd ./docs/patternlab && npm install",
+    "dev": "npm install && npm run icomoon && npm run patternlab",
+    "postinstall": ""
+  },
+  "devDependencies": {
+    "icomoon-build": "^0.2.8",
+    "grunt-sassdoc": "^2.0.3",
+    "grunt-typedoc": "^0.2.4",
+    "time-grunt": "^1.4.0"
+  },
+  "dependencies": {
+    "node-sass": "*",
+    "node-yaml": "^3.2.0",
+    "@webcomponents/webcomponentsjs": "^2.2.10",
+    "autoprefixer": "^6.7.7",
+    "document-register-element": "^1.11.1",
+    "grunt": "^1.0.4",
+    "grunt-cli": "^1.3.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^3.0.2",
+    "grunt-ts": "^6.0.0-beta.22",
+    "jquery.cookie": "^1.4.1",
+    "lodash": "^4.17.11",
+    "nunjucks": "^3.1.3",
+    "postcss-discard-comments": "^2.0.4",
+    "q": "^1.5.1",
+    "typescript": "^3.0.3",
+    "jquery": "^3.4.1"
+  }
+}

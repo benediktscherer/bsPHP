@@ -1,0 +1,39 @@
+/* ================================ *\
+   link style
+\* ================================ */
+
+/// Link styles for **default states**
+/// @group text
+/// @access public
+/// @content
+@mixin _link-default() {
+  &:link,
+  &:focus,
+  &:visited,
+  &.active {
+    @content;
+  }
+}
+
+/// Links styles for **hover state**
+/// @group text
+/// @access public
+/// @content
+@mixin _link-active() {
+  @include _transition(all);
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+/// Links styles for **disabled state**
+/// @group text
+/// @access public
+/// @content
+@mixin _link-disabled() {
+  &:disabled,
+  &.disabled {
+    @content;
+  }
+}
