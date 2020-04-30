@@ -47,6 +47,6 @@
     "postcss-discard-comments": "^2.0.4",
     "q": "^1.5.1",
     "typescript": "^3.0.3",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   }
 }
